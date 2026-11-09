@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>がんばらなくていい、自然派のある暮らし｜自然派くらぶ生活協同組合 宅配のご案内</title>
-<meta name="description" content="40代からの、そっと自分に寄り添う食材選び。多摩で50年、産地直結の宅配「自然派くらぶ」。資料請求で選べるサンプルプレゼント、宅配料・基本手数料10週間無料。">
+<meta name="description" content="40代から見直したい、毎日の食材選び。多摩で50年、産地直結の宅配「自然派くらぶ」。資料請求で選べるサンプルプレゼント、宅配料・基本手数料10週間無料。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -141,6 +141,18 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 .cost th{font-weight:700;color:var(--sub);width:44%;font-size:13.5px}
 .cost tr:last-child th,.cost tr:last-child td{border-bottom:0}
 .cost td b{color:var(--koge)}
+.fee-ex{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px}
+.fee-ex .fee-t{font-weight:900;font-size:14px;color:var(--koge);margin-bottom:8px}
+.fee-ex ul{list-style:none;display:grid;gap:8px;font-size:14px}
+.fee-ex li{background:var(--kinari);border-radius:12px;padding:10px 14px}
+.fee-ex li b{color:var(--koge)}
+.form-note{background:var(--pale);border-radius:20px;padding:22px;margin-top:26px}
+.form-note b{display:block;font-size:15.5px;color:var(--sage-d);margin-bottom:6px}
+.form-note p{font-size:14px}
+.checker-row{display:flex;gap:10px}
+.checker input{flex:1;min-width:0;font:inherit;font-size:16.5px;padding:14px 16px;border:2px solid var(--leaf);border-radius:14px;background:#fff;color:var(--ink)}
+.checker button{flex:0 0 auto;font:inherit;font-weight:900;font-size:15.5px;color:#fff;background:var(--sage);
+  border:0;border-radius:14px;padding:0 20px;cursor:pointer;box-shadow:0 3px 0 var(--sage-d)}
 
 /* area */
 .checker{background:var(--paper);border-radius:20px;padding:24px 22px;margin-top:26px}
@@ -173,8 +185,8 @@ footer b{display:block;color:var(--ink);font-size:14px;margin-bottom:4px}
 .sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
   background:rgba(250,246,238,.95);backdrop-filter:blur(6px);border-top:1px solid var(--line);display:flex;gap:10px;z-index:10}
 .sticky a{flex:1;text-align:center;text-decoration:none;font-weight:900;border-radius:999px;padding:13px 8px;font-size:15.5px}
-.sticky .s-form{background:var(--sage);color:#fff}
-.sticky .s-tel{flex:0 0 104px;background:var(--paper);color:var(--koge);border:2px solid var(--koge)}
+.sticky .s-form{flex:3;background:var(--sage);color:#fff}
+.sticky .s-tel{flex:2;background:var(--paper);color:var(--koge);border:2px solid var(--koge)}
 
 /* ---- side TOC tab & panel ---- */
 section{scroll-margin-top:18px}
@@ -256,7 +268,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
   <div class="hero" id="top">
     <div class="eyebrow">多摩で50年 ・ 産地直結の宅配</div>
     <h1 class="min">がんばらなくていい、<br><span class="hl">自然派のある暮らし。</span></h1>
-    <p class="lead">40代からの、そっと自分に寄り添う「選びかた」。<br>
+    <p class="lead">40代から、がんばりすぎない食材の「選びかた」。<br>
     ちゃんと選びたい気持ちと、忙しい毎日のあいだで揺れる方へ。<br>
     <b>週に一度、つくり手の顔が見える食材が玄関先に届く</b>——<br>それだけで、食卓と気持ちが少しずつ整っていきます。</p>
     <div class="heroimg"><img src="https://www.shizenha-club.com/takuhailp_1/images/kv.jpg" alt="自然派くらぶが届ける新鮮な食材"></div>
@@ -269,7 +281,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
     <p class="cta-note">まずは資料とサンプルから。加入を急がせることはありません。</p>
   </div>
 
-  <section id="feel"><h2 class="min"><small>FOR YOU</small>こんな気持ち、ありませんか</h2>
+  <section id="feel"><h2 class="min"><small>FOR YOU</small>こんなこと、ありませんか</h2>
     <ul class="feel">
       <li>スーパーで、<b>食品の裏の表示</b>をじっと読むようになった</li>
       <li>体の変化を感じて、<b>食べるものを少し見直したく</b>なった</li>
@@ -288,8 +300,8 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
     <div class="scenes">
       <div class="scene"><div class="no">SCENE 01</div><h3 class="min">旬が届くと、献立が決まる</h3>
       <p>毎週届くカタログと食材が、その週の食卓のヒントに。「何を作ろう」の悩みが減って、季節の移ろいを食卓で感じられるようになります。</p></div>
-      <div class="scene"><div class="no">SCENE 02</div><h3 class="min">「選ぶ」手間から、解放される</h3>
-      <p>全商品に原材料を表示し、遺伝子組換え原料の使用の有無もお伝えしています。一つひとつ表示とにらめっこしなくても、安心して選べる。それが、毎日の小さな余裕になります。</p></div>
+      <div class="scene"><div class="no">SCENE 02</div><h3 class="min">原材料がわかるから、選びやすい</h3>
+      <p>カタログには、全商品の原材料と、遺伝子組換え原料の使用の有無を表示しています。お店で一つひとつ裏の表示を探さなくても、注文のときに手元で確かめられる。「選ぶ」のは自分でも、その確認がぐっと楽になります。</p></div>
       <div class="scene"><div class="no">SCENE 03</div><h3 class="min">顔の見えるつながりが、ここにある</h3>
       <p>産地と直結し、配達は地域の担当が。生産者のこと、多摩の店や場所のこと——暮らしの読みもの「自然派ライフ」や組合員の活動を通じて、食の背景にある人とつながっていけます。</p></div>
     </div>
@@ -304,7 +316,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
       <article><img src="https://www.shizenha-club.com/takuhailp_1/images/quality_photo3.png" alt="原材料の表示">
         <div class="tx"><h3>全商品、原材料を表示</h3><p>カタログに全商品の原材料を表記。遺伝子組換え原料使用の有無も表示しています。</p></div></article>
       <article><img src="https://www.shizenha-club.com/takuhailp_1/images/quality_photo4.png" alt="厳選した食材">
-        <div class="tx"><h3>添加物を頼らない、厳選した食材選び</h3><p>自然の恵みの中から、毎日の食卓に安心して出せるものを厳選しています。</p></div></article>
+        <div class="tx"><h3>添加物に頼らない、厳選した食材選び</h3><p>自然の恵みの中から、毎日の食卓に安心して出せるものを厳選しています。</p></div></article>
     </div>
   </section>
 
@@ -374,36 +386,47 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
     <div class="cost">
       <table>
         <tr><th>入会金・年会費</th><td><b>ありません</b></td></tr>
-        <tr><th>出資金</th><td>加入時 <b>1,000円</b> ／ ご利用中は500円／月を積み立て（脱退時に返還いたします）</td></tr>
+        <tr><th>出資金</th><td>加入時 <b>1,000円</b> ／ ご利用中は500円／月を積み立て（脱退時に返還いたします）<br><span style="font-size:13px;color:var(--sub)">出資金は、商品の仕入れや配達など、生協の事業を支える元手として、組合員みんなで出し合うお金です。</span></td></tr>
         <tr><th>宅配料</th><td>1回 <b>132円</b>（税込） ※ご加入から10週間は無料</td></tr>
         <tr><th>基本手数料</th><td>1回 <b>165円</b>（税込） ※ご加入から10週間は無料</td></tr>
         <tr><th>商品代金のお支払い</th><td>口座からの引落し（引落手数料はかかりません）</td></tr>
       </table>
+      <div class="fee-ex">
+        <p class="fee-t">手数料の例（個人宅配・通常時）</p>
+        <ul>
+          <li>ご注文が <b>2,900円（税抜）</b>のとき … 宅配料132円 ＋ 基本手数料165円 ＝ <b>297円</b></li>
+          <li>ご注文が <b>3,000円（税抜）以上</b>のとき … 基本手数料は無料、<b>宅配料132円のみ</b></li>
+          <li>ご注文が <b>10,000円（税抜）以上</b>のとき … <b>宅配料も基本手数料も無料</b></li>
+        </ul>
+        <p class="note">※ご加入から10週間は、金額にかかわらず宅配料・基本手数料とも無料です。※注文のない週も、基本手数料165円はかかります。</p>
+      </div>
+    </div>
+    <div class="form-note">
+      <b>申込フォームの「コープ共済」について</b>
+      <p>資料請求フォームの最初では、ご希望の内容として「コープ共済」を選ぶ欄があります。コープ共済は、組合員の皆さんが掛金を出し合って、病気やケガに備える助け合いの保障です。資料請求や宅配のご相談だけの方は「宅配のみ」を選んでください。共済の内容は<a href="https://coopkyosai.coop/" target="_blank" rel="noopener">コープ共済の公式サイト</a>でご覧いただけます。</p>
     </div>
   </section>
 
   <section id="area"><h2 class="min"><small>AREA</small>お届けできる地域か、確認できます</h2>
     <div class="checker">
-      <label for="city">お住まいの市区町村を選んでください</label>
-      <select id="city">
-        <option value="">選択してください</option>
-        <optgroup label="東京都">
-          <option value="ok">八王子市</option><option value="ok">立川市</option><option value="ok">武蔵野市</option>
-          <option value="ok">三鷹市</option><option value="ok">青梅市</option><option value="ok">府中市</option>
-          <option value="ok">昭島市</option><option value="ok">調布市</option><option value="ok">町田市</option>
-          <option value="ok">小金井市</option><option value="ok">小平市</option><option value="ok">日野市</option>
-          <option value="ok">東村山市</option><option value="ok">国分寺市</option><option value="ok">国立市</option>
-          <option value="ok">福生市</option><option value="ok">狛江市</option><option value="ok">東大和市</option>
-          <option value="ok">武蔵村山市</option><option value="ok">多摩市</option><option value="ok">稲城市</option>
-          <option value="ok">羽村市</option><option value="ok">あきる野市</option><option value="ok">西東京市</option>
-          <option value="ok">西多摩郡日の出町</option><option value="ok">世田谷区</option><option value="ok">杉並区</option>
-          <option value="ok">練馬区</option>
-        </optgroup>
-        <optgroup label="神奈川県">
-          <option value="ok">相模原市</option><option value="ok">川崎市麻生区</option><option value="ok">横浜市青葉区</option>
-        </optgroup>
-        <option value="no">上記以外</option>
-      </select>
+      <label for="city">お住まいの市区町村を入力してください（途中まで入力すると候補が出ます）</label>
+      <div class="checker-row">
+        <input id="city" list="areas" placeholder="例：八王子市、町田、多摩" autocomplete="off">
+        <button type="button" id="checkBtn">確認する</button>
+      </div>
+      <datalist id="areas">
+        <option value="八王子市"></option><option value="立川市"></option><option value="武蔵野市"></option>
+        <option value="三鷹市"></option><option value="青梅市"></option><option value="府中市"></option>
+        <option value="昭島市"></option><option value="調布市"></option><option value="町田市"></option>
+        <option value="小金井市"></option><option value="小平市"></option><option value="日野市"></option>
+        <option value="東村山市"></option><option value="国分寺市"></option><option value="国立市"></option>
+        <option value="福生市"></option><option value="狛江市"></option><option value="東大和市"></option>
+        <option value="武蔵村山市"></option><option value="多摩市"></option><option value="稲城市"></option>
+        <option value="羽村市"></option><option value="あきる野市"></option><option value="西東京市"></option>
+        <option value="西多摩郡日の出町"></option><option value="世田谷区"></option><option value="杉並区"></option>
+        <option value="練馬区"></option><option value="相模原市"></option><option value="川崎市麻生区"></option>
+        <option value="横浜市青葉区"></option>
+      </datalist>
       <div id="result" class="result" hidden></div>
       <div class="area-list">
         <b>東京都</b>八王子市、立川市、武蔵野市、三鷹市、青梅市、府中市、昭島市、調布市、町田市、小金井市、小平市、日野市、東村山市、国分寺市、国立市、福生市、狛江市、東大和市、武蔵村山市、多摩市、稲城市、羽村市、あきる野市、西東京市、西多摩郡日の出町、世田谷区、杉並区、練馬区
@@ -421,6 +444,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
       <details><summary>不在の場合はどうなりますか？</summary><p>ご不在の場合は玄関先へ商品をお届けします（マンションの宅配ボックス対応も可）。長時間ご不在の場合には、保冷材やドライアイスを増量するなど配慮しています。置き場所のご希望も承ります。</p></details>
       <details><summary>注文方法を教えてください</summary><p>毎週、商品と翌週分のカタログが届きます。ご注文はアプリ・インターネット、注文用紙、お電話から。牛乳や卵など毎週頼める商品も多数あり、カタログは季節に合わせて少しずつ変わります。</p></details>
       <details><summary>入会の縛りはありますか？</summary><p>ございません。まずは資料請求とサンプルで、味と暮らしとの相性をお確かめください。</p></details>
+      <details><summary>申込フォームに出てくる「コープ共済」とは何ですか？</summary><p>コープ共済は、生協の組合員の皆さんが掛金を出し合って、病気やケガに備える助け合いの保障です。フォームの最初の欄は、共済の案内も希望するかどうかをお聞きするものです。資料請求や宅配のご相談だけの方は「宅配のみ」をお選びください。共済の内容は<a href="https://coopkyosai.coop/" target="_blank" rel="noopener">コープ共済の公式サイト</a>でご覧いただけます。</p></details>
     </div>
   </section>
 
@@ -436,7 +460,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
   </section>
 </main>
 
-<footer class="wrap"><b>自然派くらぶ生活協同組合</b>〒192-0363 東京都八王子市別所2-62<br>TEL 042-316-9405（代表）<br>© 2026 Shizenha Club Seikatsu Kyodo Kumiai</footer>
+<footer class="wrap"><b>自然派くらぶ生活協同組合</b>〒192-0363 東京都八王子市別所2-62<br>TEL 042-316-9405（代表）<br><a href="https://www.shizenha-club.com/privacypolicy" target="_blank" rel="noopener">個人情報保護方針（プライバシーポリシー）</a>　｜　<a href="https://www.shizenha-club.com/law" target="_blank" rel="noopener">特定商取引法に基づく表記</a><br>© 2026 Shizenha Club Seikatsu Kyodo Kumiai</footer>
 
 <div class="sticky">
   <a class="s-form" href="https://www.shizenha-club.com/contact/">資料請求・サンプル</a>
@@ -444,18 +468,28 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
 </div>
 <script>
 (function(){
-  var s=document.getElementById('city'), r=document.getElementById('result');
-  s.addEventListener('change',function(){
-    if(!s.value){r.hidden=true;return;}
-    if(s.value==='ok'){
+  var areas=['八王子市','立川市','武蔵野市','三鷹市','青梅市','府中市','昭島市','調布市','町田市','小金井市','小平市','日野市','東村山市','国分寺市','国立市','福生市','狛江市','東大和市','武蔵村山市','多摩市','稲城市','羽村市','あきる野市','西東京市','西多摩郡日の出町','世田谷区','杉並区','練馬区','相模原市','川崎市麻生区','横浜市青葉区'];
+  var input=document.getElementById('city'), r=document.getElementById('result');
+  function core(s){s=s.replace(/[\s　]/g,'').replace(/^西多摩郡/,'');var m=s.match(/市(.+?)区$/);if(m)return m[1];return s.replace(/(市|区|町|村)$/,'');}
+  function check(){
+    var v=(input.value||'').replace(/[\s　]/g,'');
+    if(!v){r.hidden=true;return;}
+    var vc=core(v), ok=false;
+    for(var i=0;i<areas.length;i++){
+      if(areas[i]===v || areas[i].indexOf(v)===0 || core(areas[i])===vc){ok=true;break;}
+    }
+    if(ok){
       r.className='result ok';
       r.innerHTML='<b>配達エリアです</b>※一部エリア外の地域があります。詳しい住所での確認は、資料請求フォームまたはお電話（042-316-9422）でどうぞ。';
     }else{
       r.className='result no';
-      r.innerHTML='<b>現在は配達エリア外です</b>エリアは少しずつ広がっています。気になる方はお問い合わせください（042-316-9422）。';
+      r.innerHTML='<b>現在は配達エリア外のようです</b>入力された市区町村がエリア一覧に見つかりませんでした。エリアは少しずつ広がっています。気になる方はお問い合わせください（042-316-9422）。';
     }
     r.hidden=false;
-  });
+  }
+  document.getElementById('checkBtn').addEventListener('click',check);
+  input.addEventListener('change',check);
+  input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();check();}});
 })();
 </script>
 <script>
