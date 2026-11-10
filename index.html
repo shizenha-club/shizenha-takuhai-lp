@@ -34,9 +34,10 @@ header{padding:20px 0 0}
 .hero{padding:34px 0 8px;text-align:center}
 .eyebrow{display:inline-block;font-size:12.5px;letter-spacing:.18em;color:var(--koge);
   border-top:1px solid var(--terra);border-bottom:1px solid var(--terra);padding:3px 16px;margin-bottom:24px;font-weight:700}
-.hero h1{font-size:35px;line-height:1.55;font-weight:700;letter-spacing:.03em}
+.hero h1{font-size:clamp(25px,8vw,35px);line-height:1.55;font-weight:700;letter-spacing:.03em}
 .hero h1 .hl{color:var(--sage-d)}
-.hero .lead{margin:20px auto 0;font-size:15.5px;color:var(--sub);max-width:520px}
+.hero h1 .nw{white-space:nowrap}
+.hero .lead{margin:20px auto 0;font-size:16.5px;color:var(--sub);max-width:520px}
 .hero .lead b{color:var(--ink)}
 .heroimg{margin:30px 0 0;border-radius:26px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(80,60,30,.45)}
 .heroimg img{width:100%;aspect-ratio:16/10;object-fit:cover}
@@ -54,20 +55,20 @@ header{padding:20px 0 0}
 
 /* sections */
 section{padding:58px 0 0}
-h2{font-size:25px;font-weight:700;text-align:center;letter-spacing:.04em;line-height:1.6}
+h2{font-size:clamp(22px,6.4vw,26px);font-weight:700;text-align:center;letter-spacing:.04em;line-height:1.6}
 h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11.5px;letter-spacing:.28em;
   color:var(--terra);font-weight:900;margin-bottom:8px}
-.sec-lead{text-align:center;font-size:14.5px;color:var(--sub);margin:14px auto 0;max-width:540px}
+.sec-lead{text-align:center;font-size:15.5px;color:var(--sub);margin:14px auto 0;max-width:540px}
 
 /* empathy */
 .feel{margin-top:26px;display:grid;gap:12px}
-.feel li{list-style:none;background:var(--paper);border-radius:16px;padding:16px 18px 16px 54px;position:relative;font-size:15px}
+.feel li{list-style:none;background:var(--paper);border-radius:16px;padding:16px 18px 16px 54px;position:relative;font-size:16px}
 .feel li::before{content:"";position:absolute;left:18px;top:20px;width:22px;height:22px;border-radius:50% 0 50% 0;
   background:var(--leaf);transform:rotate(-12deg)}
 .feel li b{color:var(--koge)}
 .soft{background:var(--pale);border-radius:22px;padding:28px 24px;margin-top:26px}
 .soft .min{font-size:19px;line-height:1.8;font-weight:700;color:var(--sage-d);text-align:center}
-.soft p{font-size:14.5px;color:var(--ink);margin-top:12px}
+.soft p{font-size:15.5px;color:var(--ink);margin-top:12px}
 .soft a{font-weight:700}
 
 /* scenes */
@@ -75,7 +76,7 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 .scene{background:var(--paper);border-radius:20px;padding:24px 22px;box-shadow:0 10px 26px -20px rgba(80,60,30,.35)}
 .scene .no{font-family:"Shippori Mincho",serif;font-size:13px;letter-spacing:.2em;color:var(--terra);font-weight:700}
 .scene h3{font-size:18px;font-weight:700;margin-top:4px;line-height:1.6}
-.scene p{font-size:14.5px;color:var(--sub);margin-top:8px}
+.scene p{font-size:15.5px;color:var(--sub);margin-top:8px}
 
 /* kodawari */
 .koda{margin-top:26px;display:grid;gap:16px}
@@ -84,7 +85,7 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 .koda img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .koda .tx{padding:18px 20px 20px}
 .koda h3{font-size:16.5px;font-weight:900;line-height:1.6}
-.koda p{font-size:14px;color:var(--sub);margin-top:6px}
+.koda p{font-size:15px;color:var(--sub);margin-top:6px}
 
 /* products */
 .prod{margin-top:26px;display:grid;gap:16px}
@@ -93,15 +94,15 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 .prod img{flex:0 0 118px;width:118px;height:118px;border-radius:16px;object-fit:cover}
 .prod .en{font-size:11px;letter-spacing:.22em;color:var(--terra);font-weight:900}
 .prod h3{font-size:16.5px;font-weight:900;line-height:1.55;margin-top:2px}
-.prod p{font-size:13.5px;color:var(--sub);margin-top:5px;line-height:1.75}
-@media(max-width:480px){.prod article{flex-direction:column;align-items:stretch}.prod img{flex:none;width:100%;height:auto;aspect-ratio:16/9}}
+.prod p{font-size:14.5px;color:var(--sub);margin-top:5px;line-height:1.75}
+@media(max-width:480px){.prod article{flex-direction:column;align-items:stretch}.prod img{flex:none;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#fff}}
 
 /* voices */
 .voice{background:var(--paper);border-radius:20px;padding:24px 22px;margin-top:16px;position:relative;
   box-shadow:0 10px 26px -20px rgba(80,60,30,.3)}
 .voice::before{content:"“";position:absolute;top:-4px;left:14px;font-family:"Shippori Mincho",serif;font-size:54px;color:var(--leaf);line-height:1}
 .voice .q{font-size:19px;font-weight:700;line-height:1.6;color:var(--sage-d);padding-top:10px}
-.voice p{font-size:14px;color:var(--sub);margin-top:8px}
+.voice p{font-size:15px;color:var(--sub);margin-top:8px}
 .voice .by{text-align:right;font-size:12.5px;color:var(--sub);margin-top:8px;font-weight:700}
 
 /* benefits */
@@ -110,20 +111,20 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 .gift h3{text-align:center;font-size:15px;letter-spacing:.12em;color:var(--terra);font-weight:900}
 .gift .big{text-align:center;font-size:22px;font-weight:900;line-height:1.55;margin-top:10px}
 .gift .big .num{font-family:"Shippori Mincho",serif;font-size:50px;color:var(--sage-d);line-height:1;vertical-align:-6px;margin:0 2px}
-.gift .detail{text-align:center;font-size:13.5px;color:var(--sub);margin-top:8px}
+.gift .detail{text-align:center;font-size:14.5px;color:var(--sub);margin-top:8px}
 .sets{margin-top:22px;display:grid;gap:12px}
 .set{background:var(--kinari);border-radius:16px;padding:16px 18px}
 .set .sn{display:inline-block;background:var(--koge);color:#fff;font-size:12px;font-weight:900;border-radius:999px;padding:2px 12px;letter-spacing:.1em}
-.set ul{margin:8px 0 0 18px;font-size:14px}
-.set p{font-size:12.5px;color:var(--sub);margin-top:6px}
+.set ul{margin:8px 0 0 18px;font-size:15px}
+.set p{font-size:13px;color:var(--sub);margin-top:6px}
 .eight{margin-top:22px;border-top:1px dashed var(--line);padding-top:20px}
 .eight .big{font-size:19px}
-.eight ul{margin:12px 0 0 18px;font-size:14px;columns:2;column-gap:28px}
+.eight ul{margin:12px 0 0 18px;font-size:15px;columns:2;column-gap:28px}
 @media(max-width:480px){.eight ul{columns:1}}
 
 .set img{width:100%;border-radius:12px;background:#fff;box-shadow:0 6px 16px -10px rgba(80,60,30,.35);margin-bottom:12px}
 .set .cap{font-size:11.5px;color:var(--sub);margin-top:8px}
-.note{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7}
+.note{font-size:12.5px;color:var(--sub);margin-top:12px;line-height:1.7}
 
 /* steps */
 .steps{margin-top:26px}
@@ -132,23 +133,23 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 .step .n{flex:0 0 44px;height:44px;border-radius:50%;background:var(--sage);color:#fff;font-weight:900;
   display:flex;align-items:center;justify-content:center;font-size:17px}
 .step b{display:block;font-size:16px;padding-top:9px}
-.step span{font-size:14px;color:var(--sub)}
+.step span{font-size:15px;color:var(--sub)}
 
 /* cost */
 .cost{background:var(--paper);border-radius:20px;padding:24px 22px;margin-top:26px}
-.cost table{width:100%;border-collapse:collapse;font-size:14.5px}
+.cost table{width:100%;border-collapse:collapse;font-size:15.5px}
 .cost th,.cost td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.cost th{font-weight:700;color:var(--sub);width:44%;font-size:13.5px}
+.cost th{font-weight:700;color:var(--sub);width:44%;font-size:14px}
 .cost tr:last-child th,.cost tr:last-child td{border-bottom:0}
 .cost td b{color:var(--koge)}
 .fee-ex{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px}
 .fee-ex .fee-t{font-weight:900;font-size:14px;color:var(--koge);margin-bottom:8px}
-.fee-ex ul{list-style:none;display:grid;gap:8px;font-size:14px}
+.fee-ex ul{list-style:none;display:grid;gap:8px;font-size:15px}
 .fee-ex li{background:var(--kinari);border-radius:12px;padding:10px 14px}
 .fee-ex li b{color:var(--koge)}
 .form-note{background:var(--pale);border-radius:20px;padding:22px;margin-top:26px}
 .form-note b{display:block;font-size:15.5px;color:var(--sage-d);margin-bottom:6px}
-.form-note p{font-size:14px}
+.form-note p{font-size:15px}
 .checker-row{display:flex;gap:10px}
 .checker input{flex:1;min-width:0;font:inherit;font-size:16.5px;padding:14px 16px;border:2px solid var(--leaf);border-radius:14px;background:#fff;color:var(--ink)}
 .checker button{flex:0 0 auto;font:inherit;font-weight:900;font-size:15.5px;color:#fff;background:var(--sage);
@@ -156,23 +157,23 @@ h2 small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11
 
 /* area */
 .checker{background:var(--paper);border-radius:20px;padding:24px 22px;margin-top:26px}
-.checker label{display:block;font-size:14.5px;font-weight:700;margin-bottom:10px}
+.checker label{display:block;font-size:15.5px;font-weight:700;margin-bottom:10px}
 .checker select{width:100%;font:inherit;font-size:16.5px;padding:14px 40px 14px 16px;border:2px solid var(--leaf);border-radius:14px;
   background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%237a8b5a' stroke-width='2.5' fill='none'/%3E%3C/svg%3E") no-repeat right 16px center;
   -webkit-appearance:none;appearance:none;color:var(--ink)}
-.result{margin-top:16px;border-radius:14px;padding:16px;font-size:14.5px;line-height:1.75}
+.result{margin-top:16px;border-radius:14px;padding:16px;font-size:15.5px;line-height:1.75}
 .result b{display:block;font-size:19px;font-weight:900;margin-bottom:2px}
 .result.ok{background:var(--pale);color:var(--sage-d)}
 .result.no{background:#f1ede6;color:var(--sub)}
-.area-list{font-size:13.5px;color:var(--sub);margin-top:18px;line-height:1.85}
-.area-list b{color:var(--ink);display:block;font-size:14px;margin-top:10px}
+.area-list{font-size:14.5px;color:var(--sub);margin-top:18px;line-height:1.85}
+.area-list b{color:var(--ink);display:block;font-size:15px;margin-top:10px}
 
 /* faq */
 .faq{margin-top:24px;display:grid;gap:12px}
 .faq details{background:var(--paper);border-radius:16px;padding:16px 18px}
-.faq summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none}
+.faq summary{cursor:pointer;font-weight:700;font-size:16px;list-style:none}
 .faq summary::before{content:"Q. ";color:var(--sage-d);font-weight:900}
-.faq p{font-size:14px;color:var(--sub);margin-top:8px}
+.faq p{font-size:15px;color:var(--sub);margin-top:8px}
 
 /* contact */
 .contact{text-align:center;margin-top:24px}
@@ -193,10 +194,10 @@ footer .flink{display:inline-block;white-space:nowrap;margin-top:3px}
 section{scroll-margin-top:18px}
 .toc-tab{position:fixed;right:0;top:44%;z-index:30;display:flex;flex-direction:column;align-items:center;gap:6px;
   background:rgba(255,253,248,.92);border:1.5px solid var(--koge);border-right:0;border-radius:16px 0 0 16px;
-  color:var(--koge);padding:14px 7px 12px;cursor:pointer;box-shadow:-4px 6px 18px -8px rgba(80,60,30,.4);
+  color:var(--koge);padding:11px 4px 9px;cursor:pointer;box-shadow:-4px 6px 18px -8px rgba(80,60,30,.4);
   backdrop-filter:blur(4px);animation:tocnudge 3.2s ease-in-out infinite}
-.toc-tab .leaf{font-size:17px;line-height:1}
-.toc-tab .tx{writing-mode:vertical-rl;font-size:13.5px;font-weight:900;letter-spacing:.28em}
+.toc-tab .leaf{font-size:15px;line-height:1}
+.toc-tab .tx{writing-mode:vertical-rl;font-size:12.5px;font-weight:900;letter-spacing:.24em}
 .toc-tab .dots{font-size:9px;letter-spacing:.1em;color:var(--terra);writing-mode:vertical-rl}
 @keyframes tocnudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-3px)}}
 .toc-backdrop{position:fixed;inset:0;background:rgba(62,52,40,.38);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s}
@@ -268,7 +269,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
 
   <div class="hero" id="top">
     <div class="eyebrow">多摩で52年 ・ 産地直結の宅配</div>
-    <h1 class="min">がんばらなくていい、<br><span class="hl">自然派のある暮らし。</span></h1>
+    <h1 class="min"><span class="nw">がんばらなくていい、</span><br><span class="hl nw">自然派のある暮らし。</span></h1>
     <p class="lead">40代から、がんばりすぎない食材の「選びかた」。<br>
     ちゃんと選びたい気持ちと、忙しい毎日のあいだで揺れる方へ。<br>
     <b>週に一度、つくり手の顔が見える食材が玄関先に届く</b>——<br>それだけで、食卓と気持ちが少しずつ整っていきます。</p>
@@ -366,7 +367,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
       <div class="eight">
         <h3>新規ご加入特典</h3>
         <div class="big">宅配料・基本手数料が<br><span class="num">10</span>週間 無料</div>
-        <p class="detail">宅配料 132円（税込）・基本手数料 165円（税込）が、初回ご利用から10週間（3か月以内）無料です。</p>
+        <p class="detail">宅配料 132円（税込）・基本手数料 165円（税込）が、<br>初回ご利用から10週間<br>（3か月以内）無料です。</p>
         <p class="detail" style="margin-top:16px">さらに、ご加入いただいた方へ<br><b style="color:var(--ink)">自然派くらぶ自慢の商品 8品プレゼント</b></p>
         <ul><li>北海道根釧 よつ葉牛乳</li><li>よつ葉のヨーグルト</li><li>ふっくらおからパン</li><li>平飼い卵（静岡こめ玉子）</li><li>ポークウインナー</li><li>丹沢高原豚 肩ロース</li><li>国産小粒 せいろ蒸し納豆</li><li>国産あつあげ</li></ul>
         <p class="note">※プレゼントの内容は、天候等により予告なく変更される場合があります。※1契約につき1セットです。<br>※お子様が満3歳になるまで宅配料が無料になる「ベビーサポート制度」、ご本人または同居のご家族が手帳をお持ちの場合に宅配料が無料になる「障害者サポート制度」もあります。</p>
