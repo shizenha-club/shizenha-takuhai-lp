@@ -195,12 +195,13 @@ section{scroll-margin-top:18px}
 .toc-tab{position:fixed;right:0;top:44%;z-index:30;display:flex;flex-direction:column;align-items:center;gap:6px;
   background:rgba(255,253,248,.92);border:1.5px solid var(--koge);border-right:0;border-radius:16px 0 0 16px;
   color:var(--koge);padding:11px 4px 9px;cursor:pointer;box-shadow:-4px 6px 18px -8px rgba(80,60,30,.4);
-  backdrop-filter:blur(4px);animation:tocnudge 3.2s ease-in-out infinite;transition:opacity .3s}
-.toc-tab.dim{opacity:.25}
+  backdrop-filter:blur(4px);transition:transform .35s ease}
+.toc-tab.away{transform:translateX(calc(100% - 9px))}
+.toc-tab .leaf{display:inline-block;animation:tocnudge 3.2s ease-in-out infinite}
 .toc-tab .leaf{font-size:15px;line-height:1}
 .toc-tab .tx{writing-mode:vertical-rl;font-size:12.5px;font-weight:900;letter-spacing:.24em}
 .toc-tab .dots{font-size:9px;letter-spacing:.1em;color:var(--terra);writing-mode:vertical-rl}
-@keyframes tocnudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-3px)}}
+@keyframes tocnudge{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
 .toc-backdrop{position:fixed;inset:0;background:rgba(62,52,40,.38);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s}
 .toc-panel{position:fixed;top:0;right:0;bottom:0;width:min(320px,86vw);background:var(--kinari);z-index:41;
   transform:translateX(102%);transition:transform .3s ease;box-shadow:-14px 0 34px -18px rgba(80,60,30,.5);
@@ -503,11 +504,12 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
   document.getElementById('tocClose').addEventListener('click',shut);
   document.getElementById('tocBackdrop').addEventListener('click',shut);
   document.querySelectorAll('.toc-list a,.toc-panel .toc-cta').forEach(function(a){a.addEventListener('click',shut)});
-  var tab=document.getElementById('tocTab'), dimT=null;
+  var tab=document.getElementById('tocTab'), awayT=null;
   window.addEventListener('scroll',function(){
-    tab.classList.add('dim');
-    clearTimeout(dimT);
-    dimT=setTimeout(function(){tab.classList.remove('dim')},700);
+    if(document.body.classList.contains('toc-open'))return;
+    tab.classList.add('away');
+    clearTimeout(awayT);
+    awayT=setTimeout(function(){tab.classList.remove('away')},700);
   },{passive:true});
 })();
 </script>
