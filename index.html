@@ -195,7 +195,8 @@ section{scroll-margin-top:18px}
 .toc-tab{position:fixed;right:0;top:44%;z-index:30;display:flex;flex-direction:column;align-items:center;gap:6px;
   background:rgba(255,253,248,.92);border:1.5px solid var(--koge);border-right:0;border-radius:16px 0 0 16px;
   color:var(--koge);padding:11px 4px 9px;cursor:pointer;box-shadow:-4px 6px 18px -8px rgba(80,60,30,.4);
-  backdrop-filter:blur(4px);animation:tocnudge 3.2s ease-in-out infinite}
+  backdrop-filter:blur(4px);animation:tocnudge 3.2s ease-in-out infinite;transition:opacity .3s}
+.toc-tab.dim{opacity:.25}
 .toc-tab .leaf{font-size:15px;line-height:1}
 .toc-tab .tx{writing-mode:vertical-rl;font-size:12.5px;font-weight:900;letter-spacing:.24em}
 .toc-tab .dots{font-size:9px;letter-spacing:.1em;color:var(--terra);writing-mode:vertical-rl}
@@ -244,7 +245,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
   <svg class="v-mikan" viewBox="0 0 100 100"><circle cx="50" cy="56" r="36" fill="#eda93f"/><path d="M52 22c1-8 6-13 15-15-1 8-5 13-11 16z" fill="#7a8b5a"/><rect x="47" y="16" width="5" height="9" rx="2.5" fill="#a8794b"/></svg>
   <svg class="v-leaf" viewBox="0 0 100 100"><path d="M50 92C20 74 10 44 14 12c32-4 62 6 76 34C78 76 66 88 50 92z" fill="#7a8b5a"/><path d="M22 78C36 56 56 36 82 22" stroke="#faf6ee" stroke-width="3" fill="none" opacity=".6"/></svg>
 </div>
-<button class="toc-tab" id="tocTab" aria-label="目次を開く"><span class="leaf">🌿</span><span class="tx">目次</span><span class="dots">・・・</span></button>
+<button class="toc-tab" id="tocTab" aria-label="目次を開く"><span class="leaf">🌿</span><span class="tx">目次</span></button>
 <div class="toc-backdrop" id="tocBackdrop"></div>
 <nav class="toc-panel" id="tocPanel" aria-label="目次">
   <button class="close" id="tocClose" aria-label="目次を閉じる">×</button>
@@ -269,7 +270,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
 
   <div class="hero" id="top">
     <div class="eyebrow">多摩で52年 ・ 産地直結の宅配</div>
-    <h1 class="min"><span class="nw">がんばらなくていい、</span><br><span class="hl nw">自然派のある暮らし。</span></h1>
+    <h1 class="min"><span class="nw">がんばらなくていい</span><br><span class="hl nw">自然派のある暮らし。</span></h1>
     <p class="lead">40代から、がんばりすぎない食材の「選びかた」。<br>
     ちゃんと選びたい気持ちと、忙しい毎日のあいだで揺れる方へ。<br>
     <b>週に一度、つくり手の顔が見える食材が玄関先に届く</b>——<br>それだけで、食卓と気持ちが少しずつ整っていきます。</p>
@@ -298,7 +299,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
   </section>
 
   <section id="rich"><h2 class="min"><small>A RICHER EVERYDAY</small>暮らしが、身も心も<br>少し豊かになる理由</h2>
-    <p class="sec-lead">自然派くらぶは「宅配」であると同時に、<br>地域の暮らしに寄り添う小さな生協です。</p>
+    <p class="sec-lead">自然派くらぶは「宅配」であると同時に<br>地域の暮らしに寄り添う小さな生協です。</p>
     <div class="scenes">
       <div class="scene"><div class="no">SCENE 01</div><h3 class="min">旬が届くと、献立が決まる</h3>
       <p>毎週届くカタログと食材が、その週の食卓のヒントに。「何を作ろう」の悩みが減って、季節の移ろいを食卓で感じられるようになります。</p></div>
@@ -367,7 +368,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
       <div class="eight">
         <h3>新規ご加入特典</h3>
         <div class="big">宅配料・基本手数料が<br><span class="num">10</span>週間 無料</div>
-        <p class="detail">宅配料 132円（税込）・基本手数料 165円（税込）が、<br>初回ご利用から10週間<br>（3か月以内）無料です。</p>
+        <p class="detail">宅配料 132円（税込）・基本手数料 165円（税込）が<br>初回ご利用から10週間<br>（3か月以内）無料です。</p>
         <p class="detail" style="margin-top:16px">さらに、ご加入いただいた方へ<br><b style="color:var(--ink)">自然派くらぶ自慢の商品 8品プレゼント</b></p>
         <ul><li>北海道根釧 よつ葉牛乳</li><li>よつ葉のヨーグルト</li><li>ふっくらおからパン</li><li>平飼い卵（静岡こめ玉子）</li><li>ポークウインナー</li><li>丹沢高原豚 肩ロース</li><li>国産小粒 せいろ蒸し納豆</li><li>国産あつあげ</li></ul>
         <p class="note">※プレゼントの内容は、天候等により予告なく変更される場合があります。※1契約につき1セットです。<br>※お子様が満3歳になるまで宅配料が無料になる「ベビーサポート制度」、ご本人または同居のご家族が手帳をお持ちの場合に宅配料が無料になる「障害者サポート制度」もあります。</p>
@@ -409,7 +410,7 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
     </div>
   </section>
 
-  <section id="area"><h2 class="min"><small>AREA</small>お届けできる地域か、<br>確認できます</h2>
+  <section id="area"><h2 class="min"><small>AREA</small>お届けできる地域か<br>確認できます</h2>
     <div class="checker">
       <label for="city">お住まいの市区町村を入力してください（途中まで入力すると候補が出ます）</label>
       <div class="checker-row">
@@ -502,6 +503,12 @@ body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
   document.getElementById('tocClose').addEventListener('click',shut);
   document.getElementById('tocBackdrop').addEventListener('click',shut);
   document.querySelectorAll('.toc-list a,.toc-panel .toc-cta').forEach(function(a){a.addEventListener('click',shut)});
+  var tab=document.getElementById('tocTab'), dimT=null;
+  window.addEventListener('scroll',function(){
+    tab.classList.add('dim');
+    clearTimeout(dimT);
+    dimT=setTimeout(function(){tab.classList.remove('dim')},700);
+  },{passive:true});
 })();
 </script>
 </body>
